@@ -1,4 +1,4 @@
-NAME = exe_scalar
+NAME = convert
 SRC = $(wildcard *.cpp)
 
 OBJS	= ${SRC:.cpp=.o}
