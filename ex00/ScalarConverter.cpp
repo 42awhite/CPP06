@@ -21,7 +21,7 @@ void ScalarConverter::convert(std::string literal)
 	{
         try 
         {
-            double d = strtod(literal.c_str(), NULL);
+            d = strtod(literal.c_str(), NULL);
             f = static_cast<float>(strtof(literal.c_str(), NULL));
 
             if (std::isnan(d)) // Manejo especial para NaN
@@ -61,7 +61,7 @@ void ScalarConverter::convert(std::string literal)
 	{
 		try 
 		{
-			i = std::stoi(literal);
+			i = std::atoi(literal.c_str());
 			std::cout << "char: " << ((i >= 32 && i <= 126) ? std::string(1, static_cast<char>(i)) : "Non displayable") << std::endl;
 			std::cout << "int: " << i << std::endl;
 			std::cout << std::fixed << std::setprecision(1);

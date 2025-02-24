@@ -3,8 +3,8 @@ SRC = $(wildcard *.cpp)
 
 OBJS	= ${SRC:.cpp=.o}
 
-CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXX		= c++
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 
@@ -13,7 +13,7 @@ OBJ = $(SRC:.cpp=.o)
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-			$(CC) $(CFLAGS) ${OBJ} -o ${NAME}
+			$(CXX) $(CPPFLAGS) ${OBJ} -o ${NAME}
 
 exe:
 	./$(NAME)
